@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "docker run -it --rm -v \"$PWD\":/usr/src/app -w /usr/src/app iojs:2 npm test",
-    "test": "./node_modules/.bin/mocha --harmony_arrow_functions"
+    "test": "./node_modules/.bin/mocha --harmony_arrow_functions",
+    "repl": "docker run -it --rm -v \"$PWD\":/usr/src/app -w /usr/src/app iojs:2"
   },
   "author": "Chris Neave <chrispneave@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
+  "private": true,
+  "dependencies": {
     "underscore": "^1.8.3"
   }
 }
