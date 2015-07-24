@@ -1,6 +1,8 @@
 var expect = require('chai').expect;
 
 describe('Map', function() {
+  'use strict';
+
   it('is a type that can be constructed', function() {
     var m = new Map();
     expect(m).to.be.an.instanceOf(Map);

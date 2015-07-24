@@ -6,12 +6,16 @@
   "scripts": {
     "start": "docker run -it --rm -v \"$PWD\":/usr/src/app -w /usr/src/app iojs:2 npm test",
     "test": "./node_modules/.bin/mocha --harmony_arrow_functions",
-    "repl": "docker run -it --rm -v \"$PWD\":/usr/src/app -w /usr/src/app iojs:2"
+    "repl": "docker run -it --rm -v \"$PWD\":/usr/src/app -w /usr/src/app iojs:2",
+    "lint": "./node_modules/.bin/eslint test"
   },
   "author": "Chris Neave <chrispneave@gmail.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^0.24.1"
   }
 }
